@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+void pyramid_row(int n)
+{
+  for (int k = 0; k < n; k++)
+  {
+    printf("#");
+  }
+}
+
 int main(void)
 {
   int size = 0;
@@ -17,19 +25,14 @@ int main(void)
       printf(" ");
     }
 
-    for (int k = 0; k < i; k++)
-    {
-      // left side of the pyramid
-      printf("#");
-    }
+    // left side of the pyramid
+    pyramid_row(i);
 
     printf("  "); // two spaces between pyramids
 
-    for (int l = 0; l < i; l++)
-    {
-      // right side of the pyramid
-      printf("#");
-    }
+    // right side of the pyramid
+    pyramid_row(i);
+
     printf("\n");
   }
   printf("\n");
